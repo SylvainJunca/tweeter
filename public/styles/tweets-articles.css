@@ -1,0 +1,45 @@
+.avatar {
+  float: left;
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+.full-name{
+  float: left;
+  margin-left: 5px;
+  font-size: 2em;
+}
+.username {
+  float: right
+}
+
+.tweet-header {
+  border-top-right-radius: inherit;
+  border-top-left-radius: inherit;
+  overflow: auto;
+  padding: 1em;
+  background: lightgrey;
+}
+.tweets {
+  margin-top: 1em;
+  border-radius: 8px;
+  margin-right: 2em;
+  margin-left: 2em;
+  border-color: black;
+  margin-bottom: 1em;
+  border: 1px solid lightgrey;
+}
+.full-name{
+  float: left;
+}
+.username {
+  float: right
+}
+.tweet-text {
+  padding: 2em 1em 2em 1em;
+}
+.timestamp {
+  border-top: 1px solid lightgrey;
+  padding: 1em;
+}
