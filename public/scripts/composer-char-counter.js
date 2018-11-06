@@ -3,7 +3,8 @@ $(document).ready(function() {
   //const countChar = document.getElementsByName('text');
   $(".new-tweet textarea").keyup(function() {
     //console.log(this.value);
-    console.log(140 - $(this).val().length);
+    var counter = 140 - $(this).val().length;
+    $(this).siblings('.counter').html(counter);
     
   });
 });
