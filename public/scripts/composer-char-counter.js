@@ -4,9 +4,9 @@ $(document).ready(function() {
   $(".new-tweet textarea").keyup(function() {
     var counter = 140 - $(this).val().length;
     if (counter <= 0) {
-      $(this).siblings('.counter').css('color', 'red');
+      $(this).siblings('.counter').addClass('counter-negative');
     } else {
-      $(this).siblings('.counter').css('color', 'black');
+      $(this).siblings('.counter').removeClass('counter-negative');
     }
     $(this).siblings('.counter').text(counter); 
   });
