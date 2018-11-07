@@ -21,7 +21,8 @@ $(function() {
     
   });
 });
- 
+
+// This function protects our tweets from Cross-Site Scripting
 function escape(str) {
   var div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
