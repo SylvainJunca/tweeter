@@ -20,14 +20,19 @@ $( document ).ready(function() {
   "created_at": 1461116232227
 }
 
-const createTweetElement = (data) => {
-  $('.tweets .avatar').attr('src', data.user.avatars.small);
-  $('.tweets .full-name').text(data.user.name);
-  $('.tweets .username').text(data.user.handle);
-  $('.tweets .tweet-text').text(data.content.text);
-
-
-}  
-
-createTweetElement(tweetData);
+const createTweetElement = (data) => {  
+const $tweet = $("<article>").addClass("tweet");
+const content =`       
+       <article class="tweets">
+         <header class="tweet-header">
+           <img class="avatar" src=${data.user.avatars.small}>
+           <span class="full-name">${data.user.name}</span>
+           <span class="username">${data.user.handle}</span>
+         </header>
+         <div class="tweet-text">${data.content.text}</div>
+         <footer class="timestamp">
+          <div>${data.created_at}</div>
+         </footer>
+       </article>`
+       return $tweet.append(content);
 });
