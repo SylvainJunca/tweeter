@@ -2,6 +2,12 @@ $( document ).ready(function() {
 
  
 
+  $( ".compose" ).on('click', (function() {
+  $( ".new-tweet" ).slideToggle( "slow" );
+  }));
+
+
+
 $(function() {
   const $button = $('.new-tweet input');
   $button.on('click', function (event) {
