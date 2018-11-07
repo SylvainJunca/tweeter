@@ -48,8 +48,8 @@ const data = [
 ];
 
 const renderTweets = (tweets) => {
-  for (const user in tweets) {
-    const $tweet = createTweetElement(tweets[user])
+  for (const tweet of tweets) {
+    const $tweet = createTweetElement(tweet);
     $('#tweets-container').append($tweet);
   }
 }
@@ -66,7 +66,7 @@ const createTweetElement = (data) => {
           <div class="tweet-text">${data.content.text}</div>
           <footer class="timestamp">
             <div>${data.created_at}</div>
-          </footer>`
+          </footer>`;
 
   return $article.append(content);
 }      
