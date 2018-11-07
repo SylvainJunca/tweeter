@@ -40,3 +40,12 @@ textarea {
 .counter-negative {
   color : red;
 }
+.error {
+  border: 2px solid darkred;
+    padding: 1em;
+    border-radius: 8px;
+    background: #FFAAAA;
+    margin-right: 2em;
+    margin-left: 2em;
+    display: none;
+}

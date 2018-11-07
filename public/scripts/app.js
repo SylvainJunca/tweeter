@@ -43,30 +43,33 @@ function escape(str) {
   $( document ).ready(function() {
 
  
-
+    // The following toggles the new tweet area when the user
+    // clicks on the compose button. Not that by default, this
+    // element is hidden 
     $( ".compose" ).on('click', (function() {
-    $( ".new-tweet" ).slideToggle( "slow" );
+    $( ".new-tweet" ).slideToggle( "fast" );
     $('textarea').focus();
     }));
   
   
   
-  
+    
     const $button = $('.new-tweet input');
     $button.on('click', function (event) {
       event.preventDefault();
       if($('textarea').val().length > 140) {
-        alert('your message is too long');
+        $( ".error" ).html('Your message is too long to be posted').slideToggle( "slow" );
       } else if ($('textarea').val().length == 0){
-        alert('You should enter the thoughts you want to tweet');
+        $( ".error" ).html('You should enter the thoughts you want to tweet').slideToggle( "slow" );
       } else {
+        $(".error").css('display', 'none');
         $.ajax({
           type: 'POST',
           url: '/tweets',
           data: $('textarea').serialize(),
           complete: loadTweets
       })
-      }
+      };
     });
     loadTweets();
   })
