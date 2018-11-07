@@ -21,9 +21,9 @@ $( document ).ready(function() {
 }
 
 const createTweetElement = (data) => {  
-const $tweet = $("<article>").addClass("tweet");
-const content =`       
-       <article class="tweets">
+const $article = $("<article>").addClass("tweet");
+const content =
+         `
          <header class="tweet-header">
            <img class="avatar" src=${data.user.avatars.small}>
            <span class="full-name">${data.user.name}</span>
@@ -32,7 +32,14 @@ const content =`
          <div class="tweet-text">${data.content.text}</div>
          <footer class="timestamp">
           <div>${data.created_at}</div>
-         </footer>
-       </article>`
-       return $tweet.append(content);
+         </footer>`
+
+       return $article.append(content);
+}      
+
+
+const $tweet = createTweetElement(tweetData);
+console.log($tweet); // to see what it looks like
+$('#tweets-container').append($tweet);
+
 });
