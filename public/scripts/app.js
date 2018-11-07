@@ -62,7 +62,9 @@ function escape(str) {
       } else if ($('textarea').val().length == 0){
         $( ".error" ).html('You should enter the thoughts you want to tweet').slideToggle( "slow" );
       } else {
-        $(".error").css('display', 'none');
+        if ($("error:visible").length == 0) {
+          $(".error").slideToggle("slow");
+        }
         $.ajax({
           type: 'POST',
           url: '/tweets',
