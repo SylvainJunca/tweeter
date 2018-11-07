@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $( document ).ready(function() {
-{
+  const tweetData = {
   "user": {
     "name": "Newton",
     "avatars": {
@@ -20,9 +20,14 @@ $( document ).ready(function() {
   "created_at": 1461116232227
 }
 
-const createTweetElement = (user) => {
-  $()
-}
+const createTweetElement = (data) => {
+  $('.tweets .avatar').attr('src', data.user.avatars.small);
+  $('.tweets .full-name').text(data.user.name);
+  $('.tweets .username').text(data.user.handle);
+  $('.tweets .tweet-text').text(data.content.text);
 
-  
+
+}  
+
+createTweetElement(tweetData);
 });
