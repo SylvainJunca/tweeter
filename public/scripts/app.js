@@ -22,7 +22,11 @@ $(function() {
   });
 });
  
-
+function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
   const loadTweets = () => {
     $.get('/tweets', function (data) {
       $('#tweets-container').empty(); //empties the container to not charge/render tweets multiple times
@@ -46,7 +50,7 @@ $(function() {
               <span class="full-name">${data.user.name}</span>
               <span class="username">${data.user.handle}</span>
             </header>
-            <div class="tweet-text">${data.content.text}</div>
+            <div class="tweet-text">${escape(data.content.text)}</div>
             <footer class="timestamp">
               <div>${data.created_at}</div>
             </footer>`;
