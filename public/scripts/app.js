@@ -1,8 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
 $( document ).ready(function() {
  
 const data = [
@@ -52,37 +47,28 @@ const data = [
   }
 ];
 
-
 const renderTweets = (tweets) => {
-  // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
   for (const user in tweets) {
     const $tweet = createTweetElement(tweets[user])
     $('#tweets-container').append($tweet);
   }
-
 }
 
-
 const createTweetElement = (data) => {  
-const $article = $("<article>").addClass("tweet");
-const content =
-         `
-         <header class="tweet-header">
-           <img class="avatar" src=${data.user.avatars.small}>
-           <span class="full-name">${data.user.name}</span>
-           <span class="username">${data.user.handle}</span>
-         </header>
-         <div class="tweet-text">${data.content.text}</div>
-         <footer class="timestamp">
-          <div>${data.created_at}</div>
-         </footer>`
+  const $article = $("<article>").addClass("tweet");
+  const content =
+          `
+          <header class="tweet-header">
+            <img class="avatar" src=${data.user.avatars.small}>
+            <span class="full-name">${data.user.name}</span>
+            <span class="username">${data.user.handle}</span>
+          </header>
+          <div class="tweet-text">${data.content.text}</div>
+          <footer class="timestamp">
+            <div>${data.created_at}</div>
+          </footer>`
 
-       return $article.append(content);
+  return $article.append(content);
 }      
-
 renderTweets(data);
-
-
 });
