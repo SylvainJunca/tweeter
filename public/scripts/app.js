@@ -62,7 +62,7 @@ function escape(str) {
       } else if ($('textarea').val().length == 0){
         $( ".error" ).html('You should enter the thoughts you want to tweet').slideToggle( "slow" );
       } else {
-        if ($("error:visible").length == 0) {
+        if ($(".error").is(":visible")) {
           $(".error").slideToggle("slow");
         }
         $.ajax({
