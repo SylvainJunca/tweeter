@@ -31,9 +31,21 @@
   border: 1px solid lightgrey;
   opacity: 0.7;
 }
-.tweets:hover {
+.tweet:hover {
   opacity: 1;
   border: 1px solid black;
+}
+.tweet:hover .interact-menu{
+  display: block;
+
+}
+.interact-menu {
+  float: right;
+  display: none;
+}
+.icons{
+  height: 25px;
+  margin: 0 0 0 5px;
 }
 .full-name{
   float: left;

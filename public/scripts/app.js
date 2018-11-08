@@ -31,7 +31,12 @@ function escape(str) {
             </header>
             <div class="tweet-text">${escape(data.content.text)}</div>
             <footer class="timestamp">
-              <div>${data.created_at}</div>
+              <span>${data.created_at}</span>
+              <span class='interact-menu'>
+              <img class='icons' src='../images/icon-flag.png'>
+              <img class='icons' src='../images/icon-retweet.png'>
+              <img class='icons' src='../images/icon-like.png'>
+              </span>
             </footer>`;
 
     return $article.append(content);
