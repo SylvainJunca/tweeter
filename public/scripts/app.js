@@ -8,6 +8,7 @@ function escape(str) {
   const loadTweets = () => {
     $.get('/tweets', function (data) {
       $('#tweets-container').empty(); //empties the container to not charge/render tweets multiple times
+      $('textarea').val(''); 
       renderTweets(data);
     })
   }
@@ -15,7 +16,7 @@ function escape(str) {
   const renderTweets = (tweets) => {
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $('#tweets-container').append($tweet);
+      $('#tweets-container').prepend($tweet);
     }
   }
 
