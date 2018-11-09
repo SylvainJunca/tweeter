@@ -5,11 +5,13 @@
   border-radius: 5px;
   margin-right: 5px;
 }
-.full-name{
+
+.full-name {
   float: left;
   margin-left: 5px;
   font-size: 2em;
 }
+
 .username {
   float: right
 }
@@ -21,6 +23,7 @@
   padding: 1em;
   background: lightgrey;
 }
+
 .tweet {
   margin-top: 1em;
   border-radius: 8px;
@@ -31,32 +34,40 @@
   border: 1px solid lightgrey;
   opacity: 0.7;
 }
+
 .tweet:hover {
   opacity: 1;
   border: 1px solid black;
 }
-.tweet:hover .interact-menu{
+
+.tweet:hover .interact-menu {
   display: block;
 
 }
+
 .interact-menu {
   float: right;
   display: none;
 }
-.icons{
+
+.icons {
   height: 25px;
   margin: 0 0 0 5px;
 }
-.full-name{
+
+.full-name {
   float: left;
 }
+
 .username {
   float: right
 }
+
 .tweet-text {
   padding: 2em 1em 2em 1em;
   font-size: 1.5em;
 }
+
 .timestamp {
   border-top: 1px solid lightgrey;
   padding: 1em;

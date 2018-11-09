@@ -26,11 +26,11 @@
 
 textarea {
   margin-top: 1em;
-    width: 100%;
-    padding-top: 1em;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-bottom: 1em;
+  width: 100%;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
 }
 
 .counter {
@@ -38,16 +38,17 @@ textarea {
 }
 
 .counter-negative {
-  color : red;
+  color: red;
 }
+
 .error {
   border: 2px solid darkred;
-    padding: 1em;
-    border-radius: 8px;
-    background: #FFAAAA;
-    margin-right: 2em;
-    margin-left: 2em;
-    display: none;
+  padding: 1em;
+  border-radius: 8px;
+  background: #FFAAAA;
+  margin-right: 2em;
+  margin-left: 2em;
+  display: none;
 }
 
 /* Responsive design */
