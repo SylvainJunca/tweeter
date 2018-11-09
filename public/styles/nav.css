@@ -31,3 +31,15 @@
 .compose:hover {
   opacity: 1;
 }
+/* Responsive design */
+@media (max-width: 450px) {
+  #nav-bar {
+    height : 80px; 
+    position : fixed;
+    top: 0;
+    width: 100%;
+    background:  #00a087;
+    color: #e8fdff;
+    padding: 0em 1em 0em 1em;
+    z-index: 1;
+}

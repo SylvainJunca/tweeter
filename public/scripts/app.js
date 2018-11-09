@@ -31,7 +31,7 @@ function escape(str) {
             </header>
             <div class="tweet-text">${escape(data.content.text)}</div>
             <footer class="timestamp">
-              <span>${data.created_at}</span>
+              <span>${$.timeago(data.created_at)}</span>
               <span class='interact-menu'>
               <img class='icons' src='../images/icon-flag.png'>
               <img class='icons' src='../images/icon-retweet.png'>
