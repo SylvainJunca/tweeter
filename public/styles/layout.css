@@ -25,12 +25,14 @@ main {
   width: 450px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 140px;
+  margin-top: 80px;
 }
+
+/* Responsive design for smaller displays */
 @media (max-width: 450px) {
   main {
     width: 100%;
-    margin-top: 140px;
+    margin-top: 80px;
   }
 }
 

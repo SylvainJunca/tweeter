@@ -50,9 +50,10 @@ textarea {
     display: none;
 }
 
+/* Responsive design */
 @media (max-width: 450px) {
   .container {
-    width: 100%;
-    margin-top: 140px;
+    margin-top: 80px;
+    padding-top: 60px;
   }
 }

@@ -31,6 +31,8 @@
 .compose:hover {
   opacity: 1;
 }
+
+
 /* Responsive design */
 @media (max-width: 450px) {
   #nav-bar {
