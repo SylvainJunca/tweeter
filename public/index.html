@@ -36,6 +36,8 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
+    <!-- This section is used to display the form to write tweets
+    By default, this section is hidden -->
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
       <form method="POST" action="/tweets">
@@ -44,9 +46,14 @@
         <span class="counter">140</span>
       </form>
     </section>
+
+    <!-- This section is used to display error messages
+    By default, this section is hidden -->
     <section>
       <div class='error'>Error</div>
     </section>
+
+    <!-- Page-specific (tweets) All the tweets will appear under -->
     <section id='tweets-container'>
     </section>
 

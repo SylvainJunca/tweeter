@@ -4,6 +4,7 @@ function escape(str) {
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
+
 const loadTweets = () => {
   $.get('/tweets', function (data) {
     $('#tweets-container').empty(); //empties the container to not charge/render tweets multiple times
@@ -49,7 +50,7 @@ $(document).ready(function () {
 
 
   // The following toggles the new tweet area when the user
-  // clicks on the compose button. Not that by default, this
+  // clicks on the compose button. Note that by default, this
   // element is hidden 
   $(".compose").on('click', (function () {
     $(".new-tweet").slideToggle("fast");
@@ -58,17 +59,23 @@ $(document).ready(function () {
 
 
 
-
+  //The following section checks if the conditions to post a tweet
+  // are reunited. If it's not the case, a message appears under 
+  // the section to 
   const $button = $('.new-tweet input');
   $button.on('click', function (event) {
     event.preventDefault();
     if ($('textarea').val().length > 140) {
-      $(".error").html('Your message is too long to be posted').slideToggle("slow");
+      if ($('.error').is(':hidden')) {
+        $(".error").html('Your message is too long to be posted').slideToggle("slow");
+      }
     } else if ($('textarea').val().length == 0) {
-      $(".error").html('You should enter the thoughts you want to tweet').slideToggle("slow");
+      if ($('.error').is(':hidden')) {
+        $(".error").html('You should enter the thoughts you want to tweet').slideToggle("slow");
+      }
     } else {
-      if ($(".error").is(":visible")) {
-        $(".error").slideToggle("slow");
+      if ($('.error').is(':visible')) {
+        $('.error').slideToggle('slow');
       }
       $.ajax({
         type: 'POST',
