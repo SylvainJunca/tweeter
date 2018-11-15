@@ -2,16 +2,34 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+## Final Product
 
-## Getting Started
 
-1. Fork this repository, then clone your fork of this repository.
-2. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+!["Screenshot of main page - Smartphone"](https://github.com/SylvainJunca/tweeter/blob/master/public/images/Tweeter-smartphone-main.png?raw=true) !["Screenshot of main page - Smartphone"](https://github.com/SylvainJunca/tweeter/blob/master/public/images/Tweeter-smartphone-compose.png?raw=true)
+!["Screenshot of landing page"](https://github.com/SylvainJunca/tweeter/blob/master/public/images/Tweeter-main.png?raw=true)
+!["Screenshot of compose area"](https://github.com/SylvainJunca/tweeter/blob/master/public/images/Tweeter-compose.png?raw=true)
 
 ## Dependencies
 
-- Express
-- Node 5.10.x or above
+- body-parser
+- chance
+- express
+- mongodb
+
+## Getting Started 
+
+- Install all dependancies (using the `npm install` command.
+- Run the development web server using the `npm run local` command.
+- Open your browser and go to `localhost:8080`
+- You can Tweet right away
+
+## Features 
+
+- The app is Responsive design
+- You can compose messages
+- The app checks if the lenght of your message is correct (>0 and <=140 charaters)
+- The app stores the tweets on a database
+
+## Features to come
+- The ability to like a tweet
+- Dployment of the app on Heroku
