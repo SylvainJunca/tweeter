@@ -20,6 +20,7 @@ const renderTweets = (tweets) => {
   }
 }
 
+// creates the HTML for the tweets collected from the database 
 const createTweetElement = (data) => {
   const $article = $("<article>").addClass("tweet");
   const content =
@@ -61,7 +62,7 @@ $(document).ready(function () {
 
   //The following section checks if the conditions to post a tweet
   // are reunited. If it's not the case, a message appears under 
-  // the section to 
+  // the section to explain the reason
   const $button = $('.new-tweet input');
   $button.on('click', function (event) {
     event.preventDefault();
