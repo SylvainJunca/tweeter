@@ -27,9 +27,10 @@ Tweeter is a simple, single-page Twitter clone.
 
 - The app is Responsive design
 - You can compose messages
+- You can see all the messages by scrolling from the most recent to the oldest
 - The app checks if the lenght of your message is correct (>0 and <=140 charaters)
 - The app stores the tweets on a database
 
 ## Features to come
 - The ability to like a tweet
-- Dployment of the app on Heroku
+- Deployment of the app on Heroku
