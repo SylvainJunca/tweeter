@@ -1,6 +1,4 @@
 $(document).ready(function() {
-  // --- our code goes here ---
-  //const countChar = document.getElementsByName('text');
   $(".new-tweet textarea").keyup(function() {
     var counter = 140 - $(this).val().length;
     if (counter <= 0) {
